@@ -71,7 +71,7 @@ def callback():
     # save tokens in session
     session["token"] = token_data
     session["token"]["created_at"] = int(time.time())
-    return redirect("/me")
+    return redirect(f"{os.environ.get('FRONTEND_URL')}/dashboard")
 
 
 def refresh_token_if_needed():
