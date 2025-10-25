@@ -10,6 +10,7 @@ python-dotenv = "*"
 flask-session = "*"
 pillow = "*"
 gunicorn = "*"
+flask-cors = "*"
 
 [dev-packages]
 
