@@ -22,7 +22,6 @@ app.config["SESSION_TYPE"] = os.environ.get("SESSION_TYPE", "filesystem")
 Session(app)
 
 CORS(app, supports_credentials=True, origins=[
-    "http://localhost:3000",
     "https://tune-tales-one.vercel.app"
 ])
 CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
