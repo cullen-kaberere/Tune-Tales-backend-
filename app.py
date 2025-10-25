@@ -13,10 +13,6 @@ from analysis import analyze_moods, generate_template_summary
 from utils import token_headers
 from flask_cors import CORS
 
-CORS(app, supports_credentials=True, origins=[
-    "http://localhost:3000",
-    "https://tune-tales-one.vercel.app"
-])
 
 load_dotenv()
 
@@ -25,6 +21,10 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "devsecret"
 app.config["SESSION_TYPE"] = os.environ.get("SESSION_TYPE", "filesystem")
 Session(app)
 
+CORS(app, supports_credentials=True, origins=[
+    "http://localhost:3000",
+    "https://tune-tales-one.vercel.app"
+])
 CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
 CLIENT_SECRET = os.environ["SPOTIFY_CLIENT_SECRET"]
 REDIRECT_URI = os.environ["SPOTIFY_REDIRECT_URI"]
