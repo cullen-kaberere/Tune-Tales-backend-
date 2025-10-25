@@ -11,6 +11,12 @@ from dotenv import load_dotenv
 
 from analysis import analyze_moods, generate_template_summary
 from utils import token_headers
+from flask_cors import CORS
+
+CORS(app, supports_credentials=True, origins=[
+    "http://localhost:3000",
+    "https://tune-tales-one.vercel.app"
+])
 
 load_dotenv()
 
