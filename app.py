@@ -24,6 +24,7 @@ Session(app)
 CORS(app, supports_credentials=True, origins=[
     "https://tune-tales-one.vercel.app"
 ])
+
 CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
 CLIENT_SECRET = os.environ["SPOTIFY_CLIENT_SECRET"]
 REDIRECT_URI = os.environ["SPOTIFY_REDIRECT_URI"]
